@@ -1,10 +1,10 @@
-import ListingCard from './ListingCard';
+import NeighborhoodCard from './NeighborhoodCard';
 
 const GuestNeighborhoods = ({neighborhoods}) => {
   return (
     <div className="neighborhoods-section">
       {neighborhoods.map(neighborhood => (
-        <ListingCard
+        <NeighborhoodCard
           key={neighborhood.id}
           neighborhoodName={neighborhood.neighborhood_name}
           costOfLiving={neighborhood.neighborhood_cost_of_living}

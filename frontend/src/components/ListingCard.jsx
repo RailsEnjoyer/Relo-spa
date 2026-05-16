@@ -1,17 +1,21 @@
 const ListingCard = ({
-  neighborhoodName,
-  costOfLiving,
-  neighborhoodWalkabilityScore,
-  neighborhoodCrimeIndex
+  title,
+  status,
+  sqft,
+  rating,
+  buy_price,
+  imageUrls
 }) => {
   return (
     <div>
-      <h4>{neighborhoodName}</h4>
-      <p>Cost of Living {costOfLiving}</p>
-      <p>Walkability Score {neighborhoodWalkabilityScore}</p>
-      <p>Safety {neighborhoodCrimeIndex}</p>
+      <h4>{title}</h4>
+      <p>Status: {status}</p>
+      <p>Size: {sqft} sqft.</p>
+      <p>Seller's rating: {rating}</p>
+      <p>${buy_price} USD</p>
+      <p>todo {imageUrls} todo</p>
     </div>
   )
-};
+}
 
 export default ListingCard;
