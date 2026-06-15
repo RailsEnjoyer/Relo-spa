@@ -1,0 +1,84 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.dashboard-grid>.stats-row-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.map-placeholder {
+  background: var(--color-default-white);
+  border-radius: 12px;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-divider);
+}
+
+/* Saved Apartments Widget Styles */
+.saved-apartments-container {
+  margin-top: 32px;
+}
+
+.saved-apartments-container h2 {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.saved-apartments-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.apartment-card {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 12px;
+  gap: 16px;
+  align-items: center;
+}
+
+.apartment-image {
+  width: 120px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.apartment-details {
+  flex: 1;
+}
+
+.apartment-title {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.apartment-rent {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.match-badge {
+  background: #dcfce7;
+  color: #166534;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 8px;
+}

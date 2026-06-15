@@ -8,24 +8,28 @@ import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
 import ProfilePage from './pages/profile/ProfilePage';
 import DashboardPage from './pages/dashboard/DashboardPage';
+import MainLayout from './components/MainLayout';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path="/guest/listings" element={<GuestListingsPage /> } />
 
-      <Route element={<ProtectedRoute />}>
-        <Route path="/profile" element={<ProfilePage/>} />
-        <Route path="/planner" element={<PlannerPage/>} />
-        <Route path="/dashboard" element={<DashboardPage/>} />
-      </Route>
+      <Route element={<MainLayout/>}>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/guest/listings" element={<GuestListingsPage /> } />
 
-      <Route path="*" element={
+        <Route element={<ProtectedRoute />}>
+          <Route path="/profile" element={<ProfilePage/>} />
+          <Route path="/planner" element={<PlannerPage/>} />
+          <Route path="/dashboard" element={<DashboardPage/>} />
+        </Route>
+
+        <Route path="*" element={
           <div style={{padding: '50px', textAlign: 'center', color: 'red'}}><h2>404 - This page does not exists</h2></div>
-      } />
+        } />
+      </Route>
     </Routes>
   );
 }

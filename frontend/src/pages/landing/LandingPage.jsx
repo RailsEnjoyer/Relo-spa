@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import FeatureCard from '../../components/landing/FeatureCard';
 import Hero from '../../components/landing/Hero';
 import Loader from '../../components/Loader';
-import Header from '../../components/Header';
 import GuestNeighborhoods from '../../components/guest_space/GuestNeighborhoods';
 import LoadingError from '../../components/errors/ApiLoadingError';
 
@@ -12,7 +11,6 @@ import marksImg from '../../assets/landing_marks.png';
 import houseImg from '../../assets/landing_house.png';
 import GuestListings from '../../components/guest_space/GuestListings';
 import GuestTimeline from '../../components/guest_space/GuestTimeline';
-import Footer from '../../components/Footer';
 
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,7 +37,6 @@ function LandingPage() {
 
   return (
     <>
-      <Header/>
       <Hero/>
 
       <section className="features-section">
@@ -98,12 +95,6 @@ function LandingPage() {
             <GuestTimeline/>
           }
         </div>
-      </section>
-
-      <section className="footer-section">
-        {
-          <Footer/>
-        }
       </section>
     </>
   )
