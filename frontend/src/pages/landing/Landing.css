@@ -20,7 +20,7 @@
 }
 
 .feature-card h3 {
-  color: #0A2540;
+  color: var(--color-primary);
 }
 
 .feature-card__title {
@@ -88,7 +88,7 @@
 .hero-section h1 {
   font-size: 4rem;
   font-weight: 600;
-  color: #0A2540;
+  color: var(--color-primary);
   letter-spacing: -0.02em;
   margin-bottom: 16px;
   text-align: center;
@@ -97,7 +97,7 @@
 .hero-section p {
   font-size: 1.25rem;
   font-weight: 500;
-  color: #0A2540;
+  color: var(--color-primary);
   max-width: 700px;
   text-align: center;
   line-height: 1.5;
@@ -111,8 +111,8 @@
 }
 
 .btn-primary {
-  background-color: #2F6A4F;
-  color: #FFFFFF;
+  background-color: var(--color-green-bg-button);
+  color: white;
   padding: 14px 32px;
   border: none;
   border-radius: 8px;
@@ -124,15 +124,15 @@
 }
 
 .btn-primary:hover {
-  background-color: #1B4332;
+  background-color: var(--color-green-bg-button-hover);
   transform: translateY(-1px);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: #0A2540;
+  color: var(--color-primary);
   padding: 14px 32px;
-  border: 2px solid #0A2540;
+  border: 2px solid var(--color-primary);
   border-radius: 8px;
   font-size: 1.05rem;
   font-weight: 600;
@@ -141,6 +141,6 @@
 }
 
 .btn-secondary:hover {
-  background-color: #0A2540;
-  color: #FFFFFF;
+  background-color: var(--color-primary);
+  color: white;
 }

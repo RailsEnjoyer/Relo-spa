@@ -1,6 +1,10 @@
+import './Loader.css';
+
 const Loader = () => {
   return (
-    <div>Loading..</div>
+    <div className="loader-container">
+      <div className="loader-spinner"></div>
+    </div>
   )
 };
 

@@ -1,11 +1,11 @@
 import './Landing.css'
 import { useState, useEffect } from 'react';
+import { apiFetch } from '../../utils/apiFetch';
 import FeatureCard from '../../components/landing/FeatureCard';
 import Hero from '../../components/landing/Hero';
 import Loader from '../../components/Loader';
 import GuestNeighborhoods from '../../components/guest_space/GuestNeighborhoods';
 import LoadingError from '../../components/errors/ApiLoadingError';
-
 import mapImg from '../../assets/landing_map.png';
 import marksImg from '../../assets/landing_marks.png';
 import houseImg from '../../assets/landing_house.png';
@@ -21,8 +21,8 @@ function LandingPage() {
 
   useEffect(() => {
     Promise.all([
-      fetch(`${import.meta.env.VITE_API_URL}/guest_space/landing_neighborhoods`).then(res => res.json()),
-      fetch(`${import.meta.env.VITE_API_URL}/guest_space/landing_listings`).then(res => res.json())
+      apiFetch(`/guest_space/landing_neighborhoods`).then(res => res.json()),
+      apiFetch(`/guest_space/landing_listings`).then(res => res.json())
     ])
     .then(([neighborhoodsData, listingsData]) => {
       setNeighborhoods(neighborhoodsData);
